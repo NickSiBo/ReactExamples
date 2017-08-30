@@ -1,6 +1,6 @@
 // jshint esversion: 6
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './icon.png';
 import './App.css';
 import $ from 'jquery';
 import Table from './table.js';
@@ -27,7 +27,7 @@ class App extends React.Component {
             this.setState({
                 data: data
             });
-            setTimeout(this.updateData, 3000000);
+            setTimeout(this.updateData, 5000);
         });
     }
 

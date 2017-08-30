@@ -8,11 +8,12 @@ class Table extends React.Component {
             <table className='main-table'>
             <tbody>
                 <tr>
+                    <th>SLA</th>
                     <th>Status</th>
                     <th>End Time</th>
                     <th>Start Job</th>
                     <th>End Job</th>
-                    <th>SLA</th>
+                    
                 </tr>
                 {this.props.data.map(row => {
                     let bulletColor = 'grey';
@@ -30,11 +31,12 @@ class Table extends React.Component {
 
                     return (
                         <tr className='table-row'>
+                            <td className='table-cell'> {Object.values(row.SLA)[0]} </td>
                             <td style={{ color: bulletColor }}> • </td>
                             <td className='table-cell'> {Object.values(row.endTime)[0]} </td>
                             <td className='table-cell'> {Object.values(row.startJob)[0]} </td>
                             <td className='table-cell'> {Object.values(row.endJob)[0]} </td>
-                            <td className='table-cell'> {Object.values(row.SLA)[0]} </td>
+                            
                         </tr>
                     );
                 })}
